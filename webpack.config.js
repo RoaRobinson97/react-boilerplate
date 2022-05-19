@@ -1,6 +1,9 @@
 /* eslint-disable indent */
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
+const devMode = process.env.NODE_ENV === "development";
 
 module.exports = {
   entry: "./src/index",
@@ -29,8 +32,12 @@ module.exports = {
         },
       },
       {
-        test: /\.css$/i,
-        use: ["style-loader", "css-loader"],
+        test: /\.css$/,
+        use: ["style-loader", "css-loader", "postcss-loader"],
+      },
+      {
+        test: /\.sass$/,
+        use: ["style-loader", "sass-loader", "postcss-loader"],
       },
       {
         test: /\.(png|jpg|gif|svg)$/i,
@@ -41,6 +48,10 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./public/index.html",
+    }),
+    new MiniCssExtractPlugin({
+      filename: devMode ? "[name].css" : "[name].[hash].css",
+      chunkFilename: devMode ? "[id].css" : "[id].[hash].css",
     }),
   ],
 };
