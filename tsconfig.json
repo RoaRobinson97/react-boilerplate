@@ -6,7 +6,8 @@
       "dom",
       "es5",
       "es6"
-    ],                             
+    ],   
+    "types": ["cypress"],                        
     "jsx": "react",             
     "sourceMap": true,                     
     "outDir": "./dist", 
@@ -15,4 +16,5 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
   },
+  "include": ["**/*.ts","**/*.js"]
 }
