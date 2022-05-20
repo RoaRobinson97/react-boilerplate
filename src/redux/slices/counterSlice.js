@@ -1,12 +1,12 @@
 /* eslint-disable no-param-reassign */
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: 0,
+  value: 0
 };
 
 export const counterSlice = createSlice({
-  name: "counter",
+  name: 'counter',
   initialState,
   reducers: {
     increment: (state) => {
@@ -21,8 +21,8 @@ export const counterSlice = createSlice({
     },
     incrementByAmount: (state, action) => {
       state.value += action.payload;
-    },
-  },
+    }
+  }
 });
 
 // Action creators are generated for each case reducer function
