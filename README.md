@@ -81,11 +81,11 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### ESlint and Prettier
 
-### CDD UI tool: React Cosmos
+### CDD UI Building tool: React Cosmos
 
-### Style guide generaator: Styleguidelist
+### Style guide generator: Styleguidelist
 
-### Documentation generaator: docz
+### Documentation generator: JSdoc
 
 ### Bundle Analyzer
 
