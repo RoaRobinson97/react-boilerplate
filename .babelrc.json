@@ -10,8 +10,6 @@
     ],
     "@babel/preset-typescript",
     "@babel/preset-react",
-    "@babel/env", 
-    "@babel/react"
   ]
   
 }
