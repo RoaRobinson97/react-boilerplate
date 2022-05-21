@@ -73,7 +73,7 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Typescript support
 
-### Enzyme Testing
+### Cypress Testing
 
 ### CSS Pre-Processos: SASS
 
@@ -87,8 +87,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ### Documentation generator: JSdoc
 
-### Bundle Analyzer
+### Webpack Bundle Analyzer
 
 ### Why-did-you-render
 
-### React-sight
+### Extensions: React-sight, React dev tools, profiler
+
+### https://github.com/enaqx/awesome-react#data-managing
