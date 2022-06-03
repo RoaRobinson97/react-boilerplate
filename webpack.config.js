@@ -14,7 +14,7 @@ module.exports = {
     filename: 'bundle.js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.css']
+    extensions: ['.ts', '.tsx', '.js', '.css', '.scss', '.tff']
   },
   module: {
     rules: [
@@ -37,12 +37,15 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader']
       },
       {
-        test: /\.sass$/,
-        use: ['style-loader', 'sass-loader', 'postcss-loader']
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
-        test: /\.(png|jpg|gif|svg)$/i,
-        type: 'asset/resource'
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        loader: 'file-loader',
+        options: {
+          name: '/public/images/[name].[ext]'
+        }
       }
     ]
   },
