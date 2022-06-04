@@ -41,11 +41,15 @@ module.exports = {
         use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader']
       },
       {
-        test: /\.(jpe?g|png|gif|svg)$/i,
-        loader: 'file-loader',
-        options: {
-          name: '/public/images/[name].[ext]'
-        }
+        test: /\.(jpe?g|gif|png|svg)$/i,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 10000
+            }
+          }
+        ]
       }
     ]
   },
